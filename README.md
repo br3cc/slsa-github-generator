@@ -46,8 +46,8 @@ Users of their software can verify a tamper-proof statement of the process to kn
 
 ### What is SLSA?
 
-[Supply-chain Levels for Software Artifacts](https://slsa.dev), or SLSA (salsa),
-is a security framework, a checklist of standards and controls to prevent
+[Supply-chain Levels for Software Artifacts](https://slsa.dev), or SLSA ("salsa"),
+is a security framework: a checklist of standards and controls to prevent
 tampering, improve integrity, and secure packages and infrastructure in your
 projects, businesses or enterprises.
 
@@ -59,8 +59,8 @@ parts really are.
 ### What is provenance?
 
 Provenance is information, or metadata, about how a software artifact was
-created. This could include information about what source code, build system,
-and build steps were used, as well as who and why the build was initiated.
+created. This may include information about what source code, build system,
+and build steps were used, as well as who initiated the build and why.
 Provenance can be used to determine the authenticity and trustworthiness of
 software artifacts that you use.
 
@@ -77,14 +77,14 @@ native GitHub projects. It allows projects to generate
 
 Specifically, this repository contains:
 
-- tools for generating non-forgeable SLSA provenance on GitHub for your
+- Tools for generating non-forgeable SLSA provenance on GitHub for your
   projects. The generated provenance meets the
   [provenance generation](https://slsa.dev/spec/v1.0/requirements#provenance-generation) and
   [isolation](https://slsa.dev/spec/v1.0/requirements#isolation-strength)
   requirements for
   [SLSA Build level 3 and above](https://slsa.dev/spec/v1.0/levels). See some
   [popular projects](#hall-of-fame) generating provenance using this project.
-- tools for building a SLSA builder on GitHub using the
+- Tools for building a SLSA builder on GitHub using the
   [Build-Your-Own-Builder](#build-your-own-builder) framework. With this
   framework, you can "wrap" an existing GitHub Action into a SLSA builder. The
   SLSA builder will generate non-forgeable provenance meeting the
@@ -182,7 +182,7 @@ This repository hosts the following builders:
 | [Maven](https://maven.apache.org/) projects | [Maven builder](internal/builders/maven/README.md)            | Build Maven packages and generates provenance. Can be uploaded to [Maven central](https://search.maven.org)                                                      | [Beta since v1.9.0](https://github.com/slsa-framework/slsa-github-generator/milestone/14)                                                                                      |
 | [Gradle](https://gradle.org/) projects      | [Gradle builder](internal/builders/gradle/README.md)          | Build Gradle projects and generates provenance. Can be uploaded to [Maven central](https://search.maven.org)                                                     | [Beta since v1.9.0](https://github.com/slsa-framework/slsa-github-generator/milestone/15)                                                                                      |
 | [Bazel](https://bazel.build/) projects      | [Bazel builder](internal/builders/bazel/README.md)            | Builds [Bazel](https://bazel.build/) projects and generates provenance                                                                                           | [WIP](https://github.com/slsa-framework/slsa-github-generator/milestone/16)                                                                                                    |
-| [docker](https://www.docker.com/) images    | Container Builder                                             | Builds docker containers and generates provenance. The generated provenance is compatible with [cosign](https://github.com/sigstore/cosign)'s attestation format | [WIP](https://github.com/slsa-framework/slsa-github-generator/milestone/5)                                                                                                     |
+| [docker](https://www.docker.com/) images    | Container Builder                                             | Builds Docker containers and generates provenance. The generated provenance is compatible with [cosign](https://github.com/sigstore/cosign)'s attestation format | [WIP](https://github.com/slsa-framework/slsa-github-generator/milestone/5)                                                                                                     |
 | Any                                         | [Container-based Builder](internal/builders/docker/README.md) | Builds projects whose build pipeline is defined with a Dockerfile                                                                                                | [Beta since v1.7.0](https://github.com/slsa-framework/slsa-github-generator/milestone/16)                                                                                      |
 
 There are other available builders using this repository's [BYOB framework](#build-your-own-builder) and not hosted in this repository:
